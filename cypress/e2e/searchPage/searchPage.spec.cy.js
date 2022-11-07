@@ -8,14 +8,18 @@ describe('Search ebay', () => {
         CommonPage.visitBaseUrl();
     });
 
-    it('should enter text into search bar', () => {
+    it('should have a visible search button', () => {
         // Check that the plan widget exists in the DOM and is visible
         SearchPage.getSearchButton().should('exist');
         SearchPage.getSearchButton().should('be.visible');
+    });
 
+    it('should enter text into the search bar', () => {
         // enter a search term into the search bar
         SearchPage.enterSearchTerm('search term text');
+    });
 
+    it('should shop by category', () => {
         // select shop by category
         SearchPage.selectShopByCategory();
     });
