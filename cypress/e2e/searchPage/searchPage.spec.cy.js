@@ -13,7 +13,10 @@ describe('Search ebay', () => {
         SearchPage.getSearchButton().should('exist');
         SearchPage.getSearchButton().should('be.visible');
 
-        // search for an item
+        // enter a search term into the search bar
         SearchPage.enterSearchTerm('search term text');
+
+        // select shop by category
+        SearchPage.selectShopByCategory();
     });
 });

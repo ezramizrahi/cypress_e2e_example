@@ -8,6 +8,11 @@ class SearchPage {
     enterSearchTerm(searchTerm) {
         cy.get('input[placeholder="Search for anything"]').type(searchTerm);
     };
+
+    // click on 'shop by category' button
+    selectShopByCategory() {
+        cy.get('button').contains('Shop by category').click();
+    };
 };
 
 module.exports = new SearchPage();
