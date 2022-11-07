@@ -1,0 +1,19 @@
+{
+  "name": "cypress_e2e_example",
+  "version": "1.0.0",
+  "description": "cypress e2e with reporting example",
+  "main": "index.js",
+  "scripts": {
+    "e2e": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ezra mizrahi ezra.mizrahi@hey.com",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.11.0",
+    "mocha": "^10.1.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
