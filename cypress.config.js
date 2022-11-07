@@ -9,6 +9,7 @@ module.exports = defineConfig({
       baseUrl: 'https://ebay.com.au'
     },
     video: false,
+    numTestsKeptInMemory: 1,
     chromeWebSecurity: false,
     reporter: 'mochawesome',
     reporterOptions: {
