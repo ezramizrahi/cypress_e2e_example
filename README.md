@@ -60,7 +60,7 @@ npm install
 3. If you want to run the tests and generate a Cypress report locally, run `npm run e2etests` in your terminal.
 
 ## API Tests
-Here are the Postman tests for the API tests:
+Below are the Postman tests. You can see the results of these in GitHub actions.
 
 ### GET
 ```sh
