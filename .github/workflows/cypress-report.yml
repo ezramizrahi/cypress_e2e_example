@@ -33,3 +33,16 @@ jobs:
           publish_dir: ./public
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
+  jobs:
+  automated-postman-api-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Postman CLI
+        run: |
+          curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+      - name: Login to Postman CLI
+        run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+      - name: Run API tests
+        run: |
+          postman collection run "23726650-a474c9a2-6198-4b8f-af5d-1bc7326c1069" -e "23726650-5fea9c64-e6e8-4e4c-9412-bb57152747f0"
