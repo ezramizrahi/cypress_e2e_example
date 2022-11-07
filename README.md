@@ -21,6 +21,8 @@
 
 ## About
 
+The GitHub URL for this project: [https://github.com/ezramizrahi/cypress_e2e_example](https://github.com/ezramizrahi/cypress_e2e_example)
+
 End-to-end tests demonstrating use of Cypress and the Page Object Model, including:
 * entering text into an input field
 * validating the existance/visibility of elements,
