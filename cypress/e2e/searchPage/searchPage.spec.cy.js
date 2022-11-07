@@ -9,7 +9,7 @@ describe('Search ebay', () => {
     });
 
     it('should have a visible search button', () => {
-        // Check that the plan widget exists in the DOM and is visible
+        // Check that the search button exists in the DOM and is visible
         SearchPage.getSearchButton().should('exist');
         SearchPage.getSearchButton().should('be.visible');
     });
