@@ -4,8 +4,14 @@
   "description": "cypress e2e with reporting example",
   "main": "index.js",
   "scripts": {
-    "e2e": "cypress open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cleanup": "rm -fr mochawsome-report",
+    "cypress:open": "cypress open",
+    "e2e": "cypress run --browser chrome --spec \"cypress/e2e/**/*\"",
+    "merge-reports": "npx mochawesome-merge mochawesome-report/mochawesome.json > mochawesome-report/output.json",
+    "html-report": "marge mochawesome-report/mochawesome.json",
+    "report:merge": "mochawesome-merge mochawesome-report/*.json > index.json",
+    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html",
+    "e2etests": "npm run cleanup && npm run e2e; npm run merge-reports && npm run html-report"
   },
   "author": "ezra mizrahi ezra.mizrahi@hey.com",
   "license": "ISC",
