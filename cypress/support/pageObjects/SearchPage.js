@@ -5,14 +5,8 @@ class SearchPage {
     };
 
     // search for item
-    searchForItem(item) {
-        cy.get('input[placeholder="Search for anything"]').type(item);
-        cy.get('input[value="Search"]').click();
-    };
-
-    // check for null matches
-    getNullMatchesText() {
-        return cy.contains('No exact matches found');
+    enterSearchTerm(searchTerm) {
+        cy.get('input[placeholder="Search for anything"]').type(searchTerm);
     };
 };
 
